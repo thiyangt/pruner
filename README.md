@@ -1,7 +1,7 @@
 pruner
 ======
 
-Reduce size of the big trained machine learning models
+Reduces the size of a pre-trained machine learning models
 
 You can install seer from github with:
 
