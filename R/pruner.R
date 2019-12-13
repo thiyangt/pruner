@@ -19,6 +19,9 @@ prune_rf <- function(object){
 
 }
 #'@example
+#'set.seed(71)
+#'data(iris)
+#'iris.rf <- randomForest(Species ~ ., data=iris, importance=TRUE,proximity=TRUE)
 #'s1 <- object.size(iris.rf)
 #'prune_iris <- prune_rf(iris.rf)
 #'print(s1, units = "auto")

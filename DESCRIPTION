@@ -9,6 +9,10 @@ Authors@R:
            comment = c(ORCID = "0000-0002-0656-9789"))
 Description: This package reduces the size of pre-trained machine learning models.
 License: GPL-3
+Depends:
+    R (>= 3.2.3),
+Imports:
+        randomForest
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
