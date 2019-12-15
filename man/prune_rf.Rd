@@ -4,10 +4,12 @@
 \alias{prune_rf}
 \title{prune big random forest models}
 \usage{
-prune_rf(object)
+prune_rf(object, rmntreemtry = FALSE)
 }
 \arguments{
 \item{object}{pre-trained random forest}
+
+\item{rmntreemtry}{if TRUE number of call, ntree and mtry will also be removed}
 }
 \value{
 size reduced model

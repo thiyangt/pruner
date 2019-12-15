@@ -2,18 +2,31 @@
 #'
 #' Reduce the size of the random forest models trained based on randomForest package
 #' @param object pre-trained random forest
+#' @param rmntreemtry if TRUE number of call, ntree and mtry will also be removed
 #' @return size reduced model
 #' @export
-prune_rf <- function(object){
+prune_rf <- function(object, rmntreemtry=FALSE){
 
-  out <- list(call=object$call,
-              type=object$type,
+  if (rmntreemtry==TRUE){
+    out <- list(#call=object$call,
+      type=object$type,
+      importanceSD = object$importanceSD,
+      classes = object$classes,
+      #ntree = object$ntree,
+      # mtry = object$mtry,
+      forest = object$forest
+    )
+  }else{
+      out <- list(#call=object$call,
+             type=object$type,
              importanceSD = object$importanceSD,
              classes = object$classes,
-            ntree = object$ntree,
-            mtry = object$mtry,
+            #ntree = object$ntree,
+           # mtry = object$mtry,
              forest = object$forest
            )
+  }
+
   class(out) <- "randomForest"
   return(out)
 
